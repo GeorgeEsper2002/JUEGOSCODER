@@ -1,0 +1,18 @@
+<p>Estamos buscando el Juego : {{titulo}}</p>
+
+{% if juegos %}
+
+<ul>
+{% for titulo in juegos %}
+    <li> {{juego.titulo}}</li>
+    <li> {{juego.estudio}}</li>
+{% endfor %}
+
+
+</ul>
+{% else %}
+<p>No hay datos con esa descripción.</p>
+
+{% endif %}
+
+<p style="color: red;">{{respuesta}}</p>

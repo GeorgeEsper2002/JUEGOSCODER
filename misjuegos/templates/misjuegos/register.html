@@ -1,0 +1,14 @@
+{%extends 'misjuegos/padre.html'%}
+    {%load static%}
+{%block contenidoQueCambia%}
+    <!--Aqui se colocan las creaciones de usuarios que pueden comentar o hacer reseñas-->
+    <h1>Crear Usuario</h1>
+    <h2>{{mensaje}}</h2>
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+
+            {{form.as_p}}
+            <input type='submit' value='Registrarse'>
+    </form> <!-- end form -->
+
+    {%endblock%}

@@ -1,0 +1,10 @@
+
+{%extends 'misjuegos/padre.html'%}
+    {%load static%}
+{%block contenidoQueCambia%}
+    <!--Aqui se colocan las creaciones de usuarios que pueden comentar o hacer reseñas-->
+    <form action='/juegoformulario/' method='POST'>{% csrf_token %}
+        {{Formulario.as_p}}
+        <input type="submit" value="Crear">
+        </form>
+    {%endblock%}

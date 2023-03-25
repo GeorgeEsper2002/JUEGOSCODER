@@ -1,0 +1,24 @@
+{%extends 'misjuegos/padre.html'%}
+    {%load static%}
+{%block contenidoQueCambia%}
+    <!--Aqui se colocan las creaciones de usuarios que pueden comentar o hacer reseñas-->
+    <h1>JUEGOS</h1>
+    {% for  juego in juegos  %}
+    <hr>
+    <h2>
+        {{juego.titulo}}
+    </h2>
+    <p>
+        Descripcion
+        {{juego.descripcion}}
+    </p><br>
+    <h3>
+        Tematica:
+        {{juego.tematica}}
+        <br>
+        Estudio:
+        {{juego.estudio}}
+    </h3>    
+    <img src="/media/{{juego.imagen}}" alt="">
+    {% endfor %}
+    {%endblock%}
